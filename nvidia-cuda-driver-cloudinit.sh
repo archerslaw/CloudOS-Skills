@@ -16,7 +16,7 @@ create_nvidia_repo_centos()
 {
     url=$(cat /etc/yum.repos.d/CentOS-Base.repo |grep baseurl | head -1 | awk -F'[/]' '{print $1"//"$3}')
     if [ -z "$url" ]; then
-        url="http://mirrors.cloud.aliyuncs.com"
+        url="http://mirrors.cloud.xxxxxx.com"
     fi
 
     cudaurl=$url"/opsx/ecs/linux/rpm/cuda/${version}/\$basearch/"
